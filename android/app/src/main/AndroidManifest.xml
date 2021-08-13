@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.kitaab_at_tawheed">
    <application
-        android:label="kitaab_at_tawheed"
+        android:label="كتاب التوحيد"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
