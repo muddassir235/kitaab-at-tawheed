@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:kitaab_at_tawheed/kitaab.dart';
 import 'package:kitaab_at_tawheed/text_content.dart';
 
 void main() {
@@ -11,6 +13,15 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: name,
+      localizationsDelegates: [
+        GlobalCupertinoLocalizations.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+      ],
+      supportedLocales: [
+        Locale('ar', 'AE')
+      ],
+      locale: Locale('ar', 'AE'),
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -80,12 +91,7 @@ class _MyHomePageState extends State<MyHomePage> {
       //     width: double.infinity,
       //   ),
       // ),
-      body: ListView(
-        children: chapters.map((chapter) =>
-            Text(
-              (chapter['title'] as Map<String, String>)['original'] as String,
-              textAlign: TextAlign.right,)).toList(),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      body: Kitaab(), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
