@@ -24,6 +24,7 @@ class MyApp extends StatelessWidget {
       locale: Locale('ar', 'AE'),
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        // fontFamily: 'Tajawal',
       ),
       home: MyHomePage(title: 'كتاب التوحيد'),
     );

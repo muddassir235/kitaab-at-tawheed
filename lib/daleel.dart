@@ -9,7 +9,7 @@ class Daleel extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.symmetric(vertical: 5.0, horizontal: 0),
-        child: Text(daleelInVariousLanguages['original'] ?? "")
+        child: Text(daleelInVariousLanguages['original'] ?? "", textAlign: TextAlign.justify,)
     );
   }
 }

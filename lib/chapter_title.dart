@@ -11,8 +11,8 @@ class ChapterTitle extends StatelessWidget {
       child: Column(
         children: [
           Container(
-            padding: EdgeInsets.fromLTRB(0, 0, 0, 10),
-            child: Text(titleInVariousLanguages['original'] ?? ""),
+            padding: EdgeInsets.symmetric(vertical: 10, horizontal: 0),
+            child: Text(titleInVariousLanguages['original'] ?? "", textAlign: TextAlign.justify,),
           )
         ],
       ),

@@ -15,10 +15,11 @@ class Chapter extends StatelessWidget {
       padding: EdgeInsets.symmetric(vertical: 10, horizontal: 30),
       child: Column(
         children: [
-          Row(children: [
-            /*IconButton(onPressed: onPressed, icon: icon),*/
-            ChapterTitle(title),
-          ],),
+          Container(
+              width: double.infinity,
+              alignment: Alignment.centerRight,
+              child: ChapterTitle(title),
+          ),
           Column(
             children: content.map((daleel) => Daleel(daleel)).toList(),
           )
