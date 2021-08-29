@@ -12,13 +12,13 @@ class Chapter extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(vertical: 10, horizontal: 30),
+      padding: EdgeInsets.fromLTRB(30, 10, 0, 10),
       child: Column(
         children: [
           Container(
               width: double.infinity,
               alignment: Alignment.centerRight,
-              child: ChapterTitle(title),
+              child: ChapterTitle(()=>{}, this.number, title),
           ),
           Column(
             children: content.map((daleel) => Daleel(daleel)).toList(),
